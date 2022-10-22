@@ -160,6 +160,4 @@ cython_debug/
 #.idea/
 
 # media
-media/photos/albums
-media/photos/participants
-media/songs
+media/
