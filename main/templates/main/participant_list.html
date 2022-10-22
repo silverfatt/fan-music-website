@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    {% for participant in object_list %}
+        <a href="{% url 'participant' participant.pk %}">
+            <div class="participant">
+                <img class="album_img" src="{{ participant.photo.url }}" alt="Фото участника удалено" width="300">
+                <p>{{ participant.name }}</p>
+                <p>{{ participant.role }}</p>
+            </div>
+        </a>
+
+    {% endfor %}
+{% endblock %}

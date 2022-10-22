@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    {% for album in object_list %}
+        <a href="{% url 'album' album.pk %}">
+            <div class="album">
+                <img class="album_img" src="{{ album.photo.url }}" alt="Фото альбома удалено" width="300">
+                <p>{{ album.title }}</p>
+                <p>{{ album.release_date.year }}</p>
+                <p>{{ album.tracks }} треков</p>
+            </div>
+        </a>
+    {% endfor %}
+{% endblock %}

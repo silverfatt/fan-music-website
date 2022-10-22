@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="album_info">
+        <p>Имя: {{ object.name }}</p>
+        <br>
+        <br>
+        <p>Дата рождения: {{ object.birthday.day }}.{{ object.birthday.month }}.{{ object.birthday.year }}</p>
+        <br>
+        <p><img style="margin-right: 20px" src="{{ object.photo.url }}" alt="Фото альбома удалено" width="300" align="left">{{ object.content }}</p>
+    </div>
+{% endblock %}

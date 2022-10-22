@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="album_info">
+        <p><img src="{{ album.photo.url }}" alt="Фото альбома удалено" width="300"></p>
+    </div>
+
+
+    <div class="album-tracklist">
+        {% for track in tracks %}
+            <div class="player">
+                <audio class='audio-player' id="player" src="{{ track.audio_track.url }}"></audio>
+                <div class="control">
+                    <i class="fas  playbtn fa-play" id="playbtn"></i>
+                </div>
+                <div class="info">
+                    {{ track.title }}
+
+                </div>
+                <div class='current' id="current">0:00</div>
+                <div class="bar1"></div>
+                <div class="bar">
+                    <div class='progress' id="progress"></div>
+                </div>
+            </div>
+            <br/>
+        {% endfor %}
+    </div>
+    <script src="../../static/js/scripts.js"></script>
+{% endblock %}

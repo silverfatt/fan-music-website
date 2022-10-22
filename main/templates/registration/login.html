@@ -1,0 +1,16 @@
+{% extends  'registration/base.html' %}
+
+{% block main %}
+    <div>
+        <div>
+            <h4>Войдите в аккаунт, чтобы иметь возможность прослушивать песни</h4>
+
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                {{ form }}
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

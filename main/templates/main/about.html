@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="album_info">
+<h1>{{ band.name }}</h1><p><img style="margin-right: 20px" src="{{ band.photo.url }}" alt="Фото альбома удалено" width="300" align="left">{{ band.content }}</p>
+</div>
+
+
+
+{% endblock %}
